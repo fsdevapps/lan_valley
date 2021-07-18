@@ -41,10 +41,10 @@ namespace LanValley
             this.ts_Menu = new System.Windows.Forms.ToolStrip();
             this.tsb_Back = new System.Windows.Forms.ToolStripButton();
             this.tsb_Exit = new System.Windows.Forms.ToolStripButton();
-            this.btn_Criar = new System.Windows.Forms.PictureBox();
+            this.btn_createUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.ts_Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Criar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_createUser)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_insertUser
@@ -182,18 +182,18 @@ namespace LanValley
             this.tsb_Exit.Text = "Sair";
             this.tsb_Exit.Click += new System.EventHandler(this.tsb_Exit_Click);
             // 
-            // btn_Criar
+            // btn_createUser
             // 
-            this.btn_Criar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Criar.Image = global::LanValley.Properties.Resources.submit;
-            this.btn_Criar.Location = new System.Drawing.Point(356, 695);
-            this.btn_Criar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Criar.Name = "btn_Criar";
-            this.btn_Criar.Size = new System.Drawing.Size(288, 84);
-            this.btn_Criar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Criar.TabIndex = 10;
-            this.btn_Criar.TabStop = false;
-            this.btn_Criar.Click += new System.EventHandler(this.btn_Criar_Click);
+            this.btn_createUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_createUser.Image = global::LanValley.Properties.Resources.submit;
+            this.btn_createUser.Location = new System.Drawing.Point(356, 695);
+            this.btn_createUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_createUser.Name = "btn_createUser";
+            this.btn_createUser.Size = new System.Drawing.Size(288, 84);
+            this.btn_createUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_createUser.TabIndex = 10;
+            this.btn_createUser.TabStop = false;
+            this.btn_createUser.Click += new System.EventHandler(this.btn_Criar_Click);
             // 
             // frmCriar
             // 
@@ -201,7 +201,7 @@ namespace LanValley
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 800);
-            this.Controls.Add(this.btn_Criar);
+            this.Controls.Add(this.btn_createUser);
             this.Controls.Add(this.ts_Menu);
             this.Controls.Add(this.lbl_insertName);
             this.Controls.Add(this.txt_insertName);
@@ -220,7 +220,7 @@ namespace LanValley
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ts_Menu.ResumeLayout(false);
             this.ts_Menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Criar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_createUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +239,6 @@ namespace LanValley
         private System.Windows.Forms.ToolStrip ts_Menu;
         private System.Windows.Forms.ToolStripButton tsb_Back;
         private System.Windows.Forms.ToolStripButton tsb_Exit;
-        private System.Windows.Forms.PictureBox btn_Criar;
+        private System.Windows.Forms.PictureBox btn_createUser;
     }
 }

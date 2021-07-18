@@ -1,0 +1,18 @@
+Login: ADMIN	2021-07-18 19:44:12
+User Criado: ender	2021-07-18 19:56:10
+Login: ENDER	2021-07-18 19:56:17
+Ação User: ENDER depositou dinheiro	2021-07-18 19:56:24
+Login: ENDER	2021-07-18 19:57:54
+Ação User: ENDER depositou dinheiro	2021-07-18 19:58:00
+Login: ADMIN	2021-07-18 19:58:15
+User Modificado: ender	2021-07-18 19:58:26
+User Criado: tony	2021-07-18 19:58:40
+User Eliminado: tony	2021-07-18 19:58:44
+Login: ADMIN	2021-07-18 19:59:25
+PC Inserido: ASUS FX-236	2021-07-18 19:59:45
+PC Eliminado:  	2021-07-18 19:59:53
+Login: ADMIN	2021-07-18 20:02:33
+Login: ADMIN	2021-07-18 20:04:09
+Login: ENDER	2021-07-18 20:04:47
+Ação User: ENDERJogou Word	2021-07-18 20:04:51
+Login: ADMIN	2021-07-18 20:06:15

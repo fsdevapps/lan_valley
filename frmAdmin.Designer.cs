@@ -33,7 +33,7 @@ namespace LanValley
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_Users = new System.Windows.Forms.TabPage();
             this.btn_deleteUser = new System.Windows.Forms.PictureBox();
-            this.btn_upgradeUser = new System.Windows.Forms.PictureBox();
+            this.btn_updateUser = new System.Windows.Forms.PictureBox();
             this.btn_insertUser = new System.Windows.Forms.PictureBox();
             this.lbl_totalUsers = new System.Windows.Forms.Label();
             this.lbl_Pass = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@ namespace LanValley
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.txt_User = new System.Windows.Forms.TextBox();
-            this.txt_Nome = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
             this.lbl_InsModUser = new System.Windows.Forms.Label();
             this.txt_searchUser = new System.Windows.Forms.TextBox();
             this.lbl_searchUser = new System.Windows.Forms.Label();
@@ -54,20 +54,20 @@ namespace LanValley
             this.dgv_PC = new System.Windows.Forms.DataGridView();
             this.lbl_Modelo = new System.Windows.Forms.Label();
             this.lbl_Marca = new System.Windows.Forms.Label();
-            this.txt_Modelo = new System.Windows.Forms.TextBox();
-            this.txt_Marca = new System.Windows.Forms.TextBox();
+            this.txt_Model = new System.Windows.Forms.TextBox();
+            this.txt_Brand = new System.Windows.Forms.TextBox();
             this.lbl_InsDelPC = new System.Windows.Forms.Label();
             this.lbl_totalpcText = new System.Windows.Forms.Label();
             this.tp_Movimentos = new System.Windows.Forms.TabPage();
             this.btn_Export = new System.Windows.Forms.PictureBox();
-            this.dgv_Movimentos = new System.Windows.Forms.DataGridView();
+            this.dgv_Transactions = new System.Windows.Forms.DataGridView();
             this.tp_addJogos = new System.Windows.Forms.TabPage();
-            this.btn_Adicionar = new System.Windows.Forms.PictureBox();
-            this.btn_Procurar = new System.Windows.Forms.PictureBox();
+            this.btn_addGame = new System.Windows.Forms.PictureBox();
+            this.btn_Search = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_gameName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_Jogos = new System.Windows.Forms.DataGridView();
+            this.dgv_Games = new System.Windows.Forms.DataGridView();
             this.lbL_Texto = new System.Windows.Forms.Label();
             this.txt_exeName = new System.Windows.Forms.TextBox();
             this.ts_Menu = new System.Windows.Forms.ToolStrip();
@@ -78,7 +78,7 @@ namespace LanValley
             this.tabControl1.SuspendLayout();
             this.tp_Users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_deleteUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_upgradeUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_updateUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_insertUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).BeginInit();
             this.tp_PC.SuspendLayout();
@@ -87,11 +87,11 @@ namespace LanValley
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).BeginInit();
             this.tp_Movimentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Export)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Movimentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Transactions)).BeginInit();
             this.tp_addJogos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Adicionar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Procurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Jogos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_addGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Search)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Games)).BeginInit();
             this.ts_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +115,7 @@ namespace LanValley
             // 
             this.tp_Users.BackColor = System.Drawing.Color.White;
             this.tp_Users.Controls.Add(this.btn_deleteUser);
-            this.tp_Users.Controls.Add(this.btn_upgradeUser);
+            this.tp_Users.Controls.Add(this.btn_updateUser);
             this.tp_Users.Controls.Add(this.btn_insertUser);
             this.tp_Users.Controls.Add(this.lbl_totalUsers);
             this.tp_Users.Controls.Add(this.lbl_Pass);
@@ -123,7 +123,7 @@ namespace LanValley
             this.tp_Users.Controls.Add(this.lbl_Nome);
             this.tp_Users.Controls.Add(this.txt_Pass);
             this.tp_Users.Controls.Add(this.txt_User);
-            this.tp_Users.Controls.Add(this.txt_Nome);
+            this.tp_Users.Controls.Add(this.txt_Name);
             this.tp_Users.Controls.Add(this.lbl_InsModUser);
             this.tp_Users.Controls.Add(this.txt_searchUser);
             this.tp_Users.Controls.Add(this.lbl_searchUser);
@@ -151,18 +151,18 @@ namespace LanValley
             this.btn_deleteUser.TabStop = false;
             this.btn_deleteUser.Click += new System.EventHandler(this.btn_deleteUser_Click);
             // 
-            // btn_upgradeUser
+            // btn_updateUser
             // 
-            this.btn_upgradeUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_upgradeUser.Image = global::LanValley.Properties.Resources.update;
-            this.btn_upgradeUser.Location = new System.Drawing.Point(756, 208);
-            this.btn_upgradeUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_upgradeUser.Name = "btn_upgradeUser";
-            this.btn_upgradeUser.Size = new System.Drawing.Size(91, 70);
-            this.btn_upgradeUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_upgradeUser.TabIndex = 17;
-            this.btn_upgradeUser.TabStop = false;
-            this.btn_upgradeUser.Click += new System.EventHandler(this.btn_upgradeUser_Click);
+            this.btn_updateUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_updateUser.Image = global::LanValley.Properties.Resources.update;
+            this.btn_updateUser.Location = new System.Drawing.Point(756, 208);
+            this.btn_updateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_updateUser.Name = "btn_updateUser";
+            this.btn_updateUser.Size = new System.Drawing.Size(91, 70);
+            this.btn_updateUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_updateUser.TabIndex = 17;
+            this.btn_updateUser.TabStop = false;
+            this.btn_updateUser.Click += new System.EventHandler(this.btn_upgradeUser_Click);
             // 
             // btn_insertUser
             // 
@@ -245,16 +245,16 @@ namespace LanValley
             this.txt_User.Size = new System.Drawing.Size(297, 27);
             this.txt_User.TabIndex = 6;
             // 
-            // txt_Nome
+            // txt_Name
             // 
-            this.txt_Nome.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_Nome.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Nome.ForeColor = System.Drawing.Color.Red;
-            this.txt_Nome.Location = new System.Drawing.Point(653, 84);
-            this.txt_Nome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Nome.Name = "txt_Nome";
-            this.txt_Nome.Size = new System.Drawing.Size(297, 27);
-            this.txt_Nome.TabIndex = 5;
+            this.txt_Name.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Name.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Name.ForeColor = System.Drawing.Color.Red;
+            this.txt_Name.Location = new System.Drawing.Point(653, 84);
+            this.txt_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(297, 27);
+            this.txt_Name.TabIndex = 5;
             // 
             // lbl_InsModUser
             // 
@@ -325,8 +325,8 @@ namespace LanValley
             this.tp_PC.Controls.Add(this.dgv_PC);
             this.tp_PC.Controls.Add(this.lbl_Modelo);
             this.tp_PC.Controls.Add(this.lbl_Marca);
-            this.tp_PC.Controls.Add(this.txt_Modelo);
-            this.tp_PC.Controls.Add(this.txt_Marca);
+            this.tp_PC.Controls.Add(this.txt_Model);
+            this.tp_PC.Controls.Add(this.txt_Brand);
             this.tp_PC.Controls.Add(this.lbl_InsDelPC);
             this.tp_PC.Controls.Add(this.lbl_totalpcText);
             this.tp_PC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,25 +413,25 @@ namespace LanValley
             this.lbl_Marca.TabIndex = 17;
             this.lbl_Marca.Text = "Marca:";
             // 
-            // txt_Modelo
+            // txt_Model
             // 
-            this.txt_Modelo.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Modelo.ForeColor = System.Drawing.Color.Red;
-            this.txt_Modelo.Location = new System.Drawing.Point(651, 172);
-            this.txt_Modelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Modelo.Name = "txt_Modelo";
-            this.txt_Modelo.Size = new System.Drawing.Size(299, 27);
-            this.txt_Modelo.TabIndex = 16;
+            this.txt_Model.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Model.ForeColor = System.Drawing.Color.Red;
+            this.txt_Model.Location = new System.Drawing.Point(651, 172);
+            this.txt_Model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Model.Name = "txt_Model";
+            this.txt_Model.Size = new System.Drawing.Size(299, 27);
+            this.txt_Model.TabIndex = 16;
             // 
-            // txt_Marca
+            // txt_Brand
             // 
-            this.txt_Marca.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Marca.ForeColor = System.Drawing.Color.Red;
-            this.txt_Marca.Location = new System.Drawing.Point(651, 130);
-            this.txt_Marca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_Marca.Name = "txt_Marca";
-            this.txt_Marca.Size = new System.Drawing.Size(299, 27);
-            this.txt_Marca.TabIndex = 15;
+            this.txt_Brand.Font = new System.Drawing.Font("Lucida Sans Typewriter", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Brand.ForeColor = System.Drawing.Color.Red;
+            this.txt_Brand.Location = new System.Drawing.Point(651, 130);
+            this.txt_Brand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Brand.Name = "txt_Brand";
+            this.txt_Brand.Size = new System.Drawing.Size(299, 27);
+            this.txt_Brand.TabIndex = 15;
             // 
             // lbl_InsDelPC
             // 
@@ -459,7 +459,7 @@ namespace LanValley
             // 
             this.tp_Movimentos.BackColor = System.Drawing.Color.White;
             this.tp_Movimentos.Controls.Add(this.btn_Export);
-            this.tp_Movimentos.Controls.Add(this.dgv_Movimentos);
+            this.tp_Movimentos.Controls.Add(this.dgv_Transactions);
             this.tp_Movimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tp_Movimentos.Location = new System.Drawing.Point(4, 28);
             this.tp_Movimentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -481,29 +481,29 @@ namespace LanValley
             this.btn_Export.TabStop = false;
             this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
-            // dgv_Movimentos
+            // dgv_Transactions
             // 
-            this.dgv_Movimentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Movimentos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Movimentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Movimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgv_Movimentos.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Movimentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Movimentos.Name = "dgv_Movimentos";
-            this.dgv_Movimentos.RowHeadersWidth = 51;
-            this.dgv_Movimentos.RowTemplate.Height = 24;
-            this.dgv_Movimentos.Size = new System.Drawing.Size(992, 503);
-            this.dgv_Movimentos.TabIndex = 0;
+            this.dgv_Transactions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Transactions.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Transactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Transactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgv_Transactions.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Transactions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Transactions.Name = "dgv_Transactions";
+            this.dgv_Transactions.RowHeadersWidth = 51;
+            this.dgv_Transactions.RowTemplate.Height = 24;
+            this.dgv_Transactions.Size = new System.Drawing.Size(992, 503);
+            this.dgv_Transactions.TabIndex = 0;
             // 
             // tp_addJogos
             // 
             this.tp_addJogos.BackColor = System.Drawing.Color.White;
-            this.tp_addJogos.Controls.Add(this.btn_Adicionar);
-            this.tp_addJogos.Controls.Add(this.btn_Procurar);
+            this.tp_addJogos.Controls.Add(this.btn_addGame);
+            this.tp_addJogos.Controls.Add(this.btn_Search);
             this.tp_addJogos.Controls.Add(this.label2);
             this.tp_addJogos.Controls.Add(this.txt_gameName);
             this.tp_addJogos.Controls.Add(this.label1);
-            this.tp_addJogos.Controls.Add(this.dgv_Jogos);
+            this.tp_addJogos.Controls.Add(this.dgv_Games);
             this.tp_addJogos.Controls.Add(this.lbL_Texto);
             this.tp_addJogos.Controls.Add(this.txt_exeName);
             this.tp_addJogos.Location = new System.Drawing.Point(4, 28);
@@ -513,31 +513,31 @@ namespace LanValley
             this.tp_addJogos.TabIndex = 3;
             this.tp_addJogos.Text = "Adicionar Jogos";
             // 
-            // btn_Adicionar
+            // btn_addGame
             // 
-            this.btn_Adicionar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Adicionar.Image = global::LanValley.Properties.Resources.submit;
-            this.btn_Adicionar.Location = new System.Drawing.Point(367, 260);
-            this.btn_Adicionar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Adicionar.Name = "btn_Adicionar";
-            this.btn_Adicionar.Size = new System.Drawing.Size(259, 86);
-            this.btn_Adicionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Adicionar.TabIndex = 9;
-            this.btn_Adicionar.TabStop = false;
-            this.btn_Adicionar.Click += new System.EventHandler(this.btn_Adicionar_Click);
+            this.btn_addGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addGame.Image = global::LanValley.Properties.Resources.submit;
+            this.btn_addGame.Location = new System.Drawing.Point(367, 260);
+            this.btn_addGame.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_addGame.Name = "btn_addGame";
+            this.btn_addGame.Size = new System.Drawing.Size(259, 86);
+            this.btn_addGame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_addGame.TabIndex = 9;
+            this.btn_addGame.TabStop = false;
+            this.btn_addGame.Click += new System.EventHandler(this.btn_Adicionar_Click);
             // 
-            // btn_Procurar
+            // btn_Search
             // 
-            this.btn_Procurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Procurar.Image = global::LanValley.Properties.Resources.search;
-            this.btn_Procurar.Location = new System.Drawing.Point(779, 181);
-            this.btn_Procurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Procurar.Name = "btn_Procurar";
-            this.btn_Procurar.Size = new System.Drawing.Size(144, 50);
-            this.btn_Procurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Procurar.TabIndex = 8;
-            this.btn_Procurar.TabStop = false;
-            this.btn_Procurar.Click += new System.EventHandler(this.btn_Procurar_Click);
+            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Search.Image = global::LanValley.Properties.Resources.search;
+            this.btn_Search.Location = new System.Drawing.Point(779, 181);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(144, 50);
+            this.btn_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Search.TabIndex = 8;
+            this.btn_Search.TabStop = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Procurar_Click);
             // 
             // label2
             // 
@@ -571,19 +571,19 @@ namespace LanValley
             this.label1.TabIndex = 5;
             this.label1.Text = "EXE:";
             // 
-            // dgv_Jogos
+            // dgv_Games
             // 
-            this.dgv_Jogos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Jogos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Jogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Jogos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_Jogos.Location = new System.Drawing.Point(0, 360);
-            this.dgv_Jogos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Jogos.Name = "dgv_Jogos";
-            this.dgv_Jogos.RowHeadersWidth = 51;
-            this.dgv_Jogos.RowTemplate.Height = 24;
-            this.dgv_Jogos.Size = new System.Drawing.Size(992, 250);
-            this.dgv_Jogos.TabIndex = 4;
+            this.dgv_Games.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Games.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Games.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Games.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgv_Games.Location = new System.Drawing.Point(0, 360);
+            this.dgv_Games.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Games.Name = "dgv_Games";
+            this.dgv_Games.RowHeadersWidth = 51;
+            this.dgv_Games.RowTemplate.Height = 24;
+            this.dgv_Games.Size = new System.Drawing.Size(992, 250);
+            this.dgv_Games.TabIndex = 4;
             // 
             // lbL_Texto
             // 
@@ -686,7 +686,7 @@ namespace LanValley
             this.tp_Users.ResumeLayout(false);
             this.tp_Users.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_deleteUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_upgradeUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_updateUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_insertUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).EndInit();
             this.tp_PC.ResumeLayout(false);
@@ -696,12 +696,12 @@ namespace LanValley
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PC)).EndInit();
             this.tp_Movimentos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Export)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Movimentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Transactions)).EndInit();
             this.tp_addJogos.ResumeLayout(false);
             this.tp_addJogos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Adicionar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Procurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Jogos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_addGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Search)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Games)).EndInit();
             this.ts_Menu.ResumeLayout(false);
             this.ts_Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
@@ -724,11 +724,11 @@ namespace LanValley
         private System.Windows.Forms.Label lbl_Nome;
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.TextBox txt_User;
-        private System.Windows.Forms.TextBox txt_Nome;
+        private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label lbl_InsModUser;
         private System.Windows.Forms.TextBox txt_searchUser;
         private System.Windows.Forms.Label lbl_searchUser;
-        private System.Windows.Forms.DataGridView dgv_Movimentos;
+        private System.Windows.Forms.DataGridView dgv_Transactions;
         private System.Windows.Forms.TabPage tp_addJogos;
         private System.Windows.Forms.Label lbL_Texto;
         private System.Windows.Forms.TextBox txt_exeName;
@@ -736,25 +736,25 @@ namespace LanValley
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_gameName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_Jogos;
+        private System.Windows.Forms.DataGridView dgv_Games;
         private System.Windows.Forms.ToolStripButton tsb_Exit;
         private System.Windows.Forms.Label lbl_totalUsers;
         private System.Windows.Forms.PictureBox btn_deleteUser;
-        private System.Windows.Forms.PictureBox btn_upgradeUser;
+        private System.Windows.Forms.PictureBox btn_updateUser;
         private System.Windows.Forms.PictureBox btn_insertUser;
         private System.Windows.Forms.TabPage tp_PC;
         private System.Windows.Forms.Label lbl_totalPC;
         private System.Windows.Forms.DataGridView dgv_PC;
         private System.Windows.Forms.Label lbl_Modelo;
         private System.Windows.Forms.Label lbl_Marca;
-        private System.Windows.Forms.TextBox txt_Modelo;
-        private System.Windows.Forms.TextBox txt_Marca;
+        private System.Windows.Forms.TextBox txt_Model;
+        private System.Windows.Forms.TextBox txt_Brand;
         private System.Windows.Forms.Label lbl_InsDelPC;
         private System.Windows.Forms.Label lbl_totalpcText;
         private System.Windows.Forms.PictureBox btn_deletePC;
         private System.Windows.Forms.PictureBox btn_insertPC;
         private System.Windows.Forms.PictureBox btn_Export;
-        private System.Windows.Forms.PictureBox btn_Procurar;
-        private System.Windows.Forms.PictureBox btn_Adicionar;
+        private System.Windows.Forms.PictureBox btn_Search;
+        private System.Windows.Forms.PictureBox btn_addGame;
     }
 }

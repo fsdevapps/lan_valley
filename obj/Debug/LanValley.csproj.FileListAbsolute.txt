@@ -65,7 +65,6 @@ C:\Coding\C#\LanValley\bin\Debug\LanValley.pdb
 C:\Coding\C#\LanValley\bin\Debug\CircularProgressBar.dll
 C:\Coding\C#\LanValley\bin\Debug\WinFormAnimation.dll
 C:\Coding\C#\LanValley\bin\Debug\CircularProgressBar.xml
-C:\Coding\C#\LanValley\obj\Debug\LanValley.csproj.AssemblyReference.cache
 C:\Coding\C#\LanValley\obj\Debug\LanValley.frmAdmin.resources
 C:\Coding\C#\LanValley\obj\Debug\LanValley.frmContactingBD.resources
 C:\Coding\C#\LanValley\obj\Debug\LanValley.frmCriar.resources

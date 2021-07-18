@@ -29,18 +29,18 @@ namespace LanValley
         private void frmJogos_Load(object sender, EventArgs e)
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Jogos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Games", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
-            dgv_Jogos.DataSource = dtbl;
+            dgv_Games.DataSource = dtbl;
         }
 
         //get values when a row is selected on datagridview
         private void dgv_Jogos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Id = Convert.ToInt32(dgv_Jogos.Rows[e.RowIndex].Cells[0].Value);
-            lbl_gameName.Text = dgv_Jogos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            gameEXE = dgv_Jogos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            Id = Convert.ToInt32(dgv_Games.Rows[e.RowIndex].Cells[0].Value);
+            lbl_gameName.Text = dgv_Games.Rows[e.RowIndex].Cells[1].Value.ToString();
+            gameEXE = dgv_Games.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         //button click event -> play the game selected from datagridview
@@ -75,7 +75,7 @@ namespace LanValley
         }
 
         //button click event -> close current form
-        private void btn_Sair_Click(object sender, EventArgs e)
+        private void btn_Exit_Click(object sender, EventArgs e)
         {
             frmUsers users = new frmUsers();
             Hide();

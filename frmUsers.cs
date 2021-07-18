@@ -89,7 +89,7 @@ namespace LanValley
         private void insertDeposit()
         {
             sqlcon = new SqlConnection(cs);
-            cmd = new SqlCommand("INSERT INTO [tbl_Movimentos] ([Descrição], [Montante]) VALUES (@Desc, @Montante)", sqlcon);
+            cmd = new SqlCommand("INSERT INTO [tbl_Transactions] ([Descrição], [Montante]) VALUES (@Desc, @Montante)", sqlcon);
             sqlcon.Open();
             cmd.Parameters.AddWithValue("@Desc", "Depósito de: '" + lbl_User.Text + "'");
             cmd.Parameters.AddWithValue("@Montante", txt_Montante.Text);

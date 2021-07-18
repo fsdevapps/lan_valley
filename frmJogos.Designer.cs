@@ -34,13 +34,13 @@ namespace LanValley
             this.btn_Browser = new System.Windows.Forms.PictureBox();
             this.btn_playSelected = new System.Windows.Forms.PictureBox();
             this.lbl_gameName = new System.Windows.Forms.Label();
-            this.dgv_Jogos = new System.Windows.Forms.DataGridView();
-            this.btn_Sair = new System.Windows.Forms.Button();
+            this.dgv_Games = new System.Windows.Forms.DataGridView();
+            this.btn_Exit = new System.Windows.Forms.Button();
             this.logo = new System.Windows.Forms.PictureBox();
             this.gameArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Browser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_playSelected)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Jogos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Games)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@ namespace LanValley
             this.gameArea.Controls.Add(this.btn_Browser);
             this.gameArea.Controls.Add(this.btn_playSelected);
             this.gameArea.Controls.Add(this.lbl_gameName);
-            this.gameArea.Controls.Add(this.dgv_Jogos);
+            this.gameArea.Controls.Add(this.dgv_Games);
             this.gameArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gameArea.Location = new System.Drawing.Point(0, 100);
             this.gameArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -94,34 +94,34 @@ namespace LanValley
             this.lbl_gameName.Text = "Nome do Jogo";
             this.lbl_gameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgv_Jogos
+            // dgv_Games
             // 
-            this.dgv_Jogos.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Jogos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Jogos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgv_Jogos.Location = new System.Drawing.Point(0, 0);
-            this.dgv_Jogos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgv_Jogos.Name = "dgv_Jogos";
-            this.dgv_Jogos.RowHeadersWidth = 51;
-            this.dgv_Jogos.RowTemplate.Height = 24;
-            this.dgv_Jogos.Size = new System.Drawing.Size(492, 700);
-            this.dgv_Jogos.TabIndex = 1;
-            this.dgv_Jogos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Jogos_RowHeaderMouseClick);
+            this.dgv_Games.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Games.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Games.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgv_Games.Location = new System.Drawing.Point(0, 0);
+            this.dgv_Games.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_Games.Name = "dgv_Games";
+            this.dgv_Games.RowHeadersWidth = 51;
+            this.dgv_Games.RowTemplate.Height = 24;
+            this.dgv_Games.Size = new System.Drawing.Size(492, 700);
+            this.dgv_Games.TabIndex = 1;
+            this.dgv_Games.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Jogos_RowHeaderMouseClick);
             // 
-            // btn_Sair
+            // btn_Exit
             // 
-            this.btn_Sair.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Sair.BackgroundImage = global::LanValley.Properties.Resources.back;
-            this.btn_Sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Sair.FlatAppearance.BorderSize = 0;
-            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Sair.Location = new System.Drawing.Point(5, 58);
-            this.btn_Sair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(44, 37);
-            this.btn_Sair.TabIndex = 3;
-            this.btn_Sair.UseVisualStyleBackColor = false;
-            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
+            this.btn_Exit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Exit.BackgroundImage = global::LanValley.Properties.Resources.back;
+            this.btn_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Exit.FlatAppearance.BorderSize = 0;
+            this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Exit.Location = new System.Drawing.Point(5, 58);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(44, 37);
+            this.btn_Exit.TabIndex = 3;
+            this.btn_Exit.UseVisualStyleBackColor = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // logo
             // 
@@ -142,7 +142,7 @@ namespace LanValley
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 800);
-            this.Controls.Add(this.btn_Sair);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.gameArea);
             this.Controls.Add(this.logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -155,7 +155,7 @@ namespace LanValley
             this.gameArea.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_Browser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_playSelected)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Jogos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Games)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
@@ -164,8 +164,8 @@ namespace LanValley
         #endregion
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel gameArea;
-        private System.Windows.Forms.Button btn_Sair;
-        private System.Windows.Forms.DataGridView dgv_Jogos;
+        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.DataGridView dgv_Games;
         private System.Windows.Forms.Label lbl_gameName;
         private System.Windows.Forms.PictureBox btn_Browser;
         private System.Windows.Forms.PictureBox btn_playSelected;

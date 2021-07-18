@@ -30,8 +30,8 @@ namespace LanValley
             totalPC();
             showUsers();
             showPC();
-            showMovimentos();
-            showJogos();
+            showTransactions();
+            showGames();
         }
 
         //displays total number of users on a label
@@ -75,31 +75,31 @@ namespace LanValley
         }
 
         //displays registered movements on a datagridview
-        private void showMovimentos()
+        private void showTransactions()
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Movimentos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Transactions", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
-            dgv_Movimentos.DataSource = dtbl;
+            dgv_Transactions.DataSource = dtbl;
         }
 
         //button click event -> export datagridview records
         private void btn_Export_Click(object sender, EventArgs e)
         {
-            if (dgv_Movimentos.Rows.Count > 0)
+            if (dgv_Transactions.Rows.Count > 0)
             {
-                SaveFileDialog exportMovements = new SaveFileDialog();
-                exportMovements.Filter = "CSV (*.csv)|*.csv";
-                exportMovements.FileName = "Movimentos.csv";
+                SaveFileDialog exportTransactions = new SaveFileDialog();
+                exportTransactions.Filter = "CSV (*.csv)|*.csv";
+                exportTransactions.FileName = "Movimentos.csv";
                 bool fileError = false;
-                if (exportMovements.ShowDialog() == DialogResult.OK)
+                if (exportTransactions.ShowDialog() == DialogResult.OK)
                 {
-                    if (File.Exists(exportMovements.FileName))
+                    if (File.Exists(exportTransactions.FileName))
                     {
                         try
                         {
-                            File.Delete(exportMovements.FileName);
+                            File.Delete(exportTransactions.FileName);
                         }
                         catch (IOException ex)
                         {
@@ -111,24 +111,24 @@ namespace LanValley
                     {
                         try
                         {
-                            int columnCount = dgv_Movimentos.Columns.Count;
+                            int columnCount = dgv_Transactions.Columns.Count;
                             string columnNames = "";
-                            string[] outputCsv = new string[dgv_Movimentos.Rows.Count + 1];
+                            string[] outputCsv = new string[dgv_Transactions.Rows.Count + 1];
                             for (int i = 0; i < columnCount; i++)
                             {
-                                columnNames += dgv_Movimentos.Columns[i].HeaderText.ToString() + ",";
+                                columnNames += dgv_Transactions.Columns[i].HeaderText.ToString() + ",";
                             }
                             outputCsv[0] += columnNames;
 
-                            for (int i = 1; (i - 1) < dgv_Movimentos.Rows.Count; i++)
+                            for (int i = 1; (i - 1) < dgv_Transactions.Rows.Count; i++)
                             {
                                 for (int j = 0; j < columnCount; j++)
                                 {
-                                    outputCsv[i] += dgv_Movimentos.Rows[i - 1].Cells[j].Value + ",";
+                                    outputCsv[i] += dgv_Transactions.Rows[i - 1].Cells[j].Value + ",";
                                 }
                             }
 
-                            File.WriteAllLines(exportMovements.FileName, outputCsv, Encoding.UTF8);
+                            File.WriteAllLines(exportTransactions.FileName, outputCsv, Encoding.UTF8);
                             MessageBox.Show("Dados exportados com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
@@ -145,13 +145,13 @@ namespace LanValley
         }
 
         //displays registered games on a datagridview
-        private void showJogos()
+        private void showGames()
         {
             sqlcon = new SqlConnection(cs);
-            adapter = new SqlDataAdapter("SELECT * FROM tbl_Jogos", sqlcon);
+            adapter = new SqlDataAdapter("SELECT * FROM tbl_Games", sqlcon);
             dtbl = new DataTable();
             adapter.Fill(dtbl);
-            dgv_Jogos.DataSource = dtbl;
+            dgv_Games.DataSource = dtbl;
         }
 
         //change datagridview when a user is searched
@@ -170,7 +170,7 @@ namespace LanValley
         private void dgv_Users_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Id = Convert.ToInt32(dgv_Users.Rows[e.RowIndex].Cells[0].Value);
-            txt_Nome.Text = dgv_Users.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_Name.Text = dgv_Users.Rows[e.RowIndex].Cells[1].Value.ToString();
             txt_User.Text = dgv_Users.Rows[e.RowIndex].Cells[2].Value.ToString();
             txt_Pass.Text = dgv_Users.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
@@ -178,7 +178,7 @@ namespace LanValley
         //button click event -> insert users on BD
         private void btn_insertUser_Click(object sender, EventArgs e)
         {
-            if (txt_Nome.Text != "" && txt_User.Text != "" && txt_Pass.Text != "")
+            if (txt_Name.Text != "" && txt_User.Text != "" && txt_Pass.Text != "")
             {
                 new frmContactingBD().ShowDialog();
 
@@ -194,7 +194,7 @@ namespace LanValley
 
                 else
                 {
-                    cmd.Parameters.AddWithValue("@Nome", txt_Nome.Text);
+                    cmd.Parameters.AddWithValue("@Nome", txt_Name.Text);
                     cmd.Parameters.AddWithValue("@User", txt_User.Text);
                     cmd.Parameters.AddWithValue("@Pass", txt_Pass.Text);
                     cmd.Parameters.AddWithValue("@Dinheiro", 0.00);
@@ -212,7 +212,7 @@ namespace LanValley
                 showUsers();
                 totalUsers();
 
-                txt_Nome.Clear();
+                txt_Name.Clear();
                 txt_User.Clear();
                 txt_Pass.Clear();
             }
@@ -223,7 +223,7 @@ namespace LanValley
         //button click event -> update user on BD
         private void btn_upgradeUser_Click(object sender, EventArgs e)
         {
-            if (txt_Nome.Text != "" && txt_User.Text != "" && txt_Pass.Text != "")
+            if (txt_Name.Text != "" && txt_User.Text != "" && txt_Pass.Text != "")
             {
                 new frmContactingBD().ShowDialog();
 
@@ -231,7 +231,7 @@ namespace LanValley
                 cmd = new SqlCommand("UPDATE tbl_Accounts SET Nome=@Nome, Username=@User, Password=@Pass WHERE Id=@Id", sqlcon);
                 sqlcon.Open();
                 cmd.Parameters.AddWithValue("@Id", Id);
-                cmd.Parameters.AddWithValue("@Nome", txt_Nome.Text);
+                cmd.Parameters.AddWithValue("@Nome", txt_Name.Text);
                 cmd.Parameters.AddWithValue("@User", txt_User.Text);
                 cmd.Parameters.AddWithValue("@Pass", txt_Pass.Text);
                 cmd.ExecuteNonQuery();
@@ -246,7 +246,7 @@ namespace LanValley
 
                 showUsers();
 
-                txt_Nome.Clear();
+                txt_Name.Clear();
                 txt_User.Clear();
                 txt_Pass.Clear();
             }
@@ -279,13 +279,13 @@ namespace LanValley
                     showUsers();
                     totalUsers();
 
-                    txt_Nome.Clear();
+                    txt_Name.Clear();
                     txt_User.Clear();
                     txt_Pass.Clear();
                 }
                 else
                 {
-                    txt_Nome.Clear();
+                    txt_Name.Clear();
                     txt_User.Clear();
                     txt_Pass.Clear();
                 }
@@ -298,22 +298,22 @@ namespace LanValley
         private void dgv_PC_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             Id = Convert.ToInt32(dgv_PC.Rows[e.RowIndex].Cells[0].Value);
-            txt_Marca.Text = dgv_PC.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txt_Modelo.Text = dgv_PC.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txt_Brand.Text = dgv_PC.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_Model.Text = dgv_PC.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
         //button click event -> insert PC on BD
         private void btn_insertPC_Click(object sender, EventArgs e)
         {
-            if (txt_Marca.Text != "" && txt_Modelo.Text != "")
+            if (txt_Brand.Text != "" && txt_Model.Text != "")
             {
                 new frmContactingBD().ShowDialog();
 
                 sqlcon = new SqlConnection(cs);
                 cmd = new SqlCommand("INSERT INTO tbl_PC ([Marca], [Modelo]) VALUES (@Marca, @Modelo)", sqlcon);
                 sqlcon.Open();
-                cmd.Parameters.AddWithValue("@Marca", txt_Marca.Text);
-                cmd.Parameters.AddWithValue("Modelo", txt_Modelo.Text);
+                cmd.Parameters.AddWithValue("@Marca", txt_Brand.Text);
+                cmd.Parameters.AddWithValue("Modelo", txt_Model.Text);
                 cmd.ExecuteNonQuery();
                 sqlcon.Close();
 
@@ -321,14 +321,14 @@ namespace LanValley
 
                 //write action in logs file
                 StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("PC Inserido: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.Now.ToString() + "\n");
+                stringBuilder.Append("PC Inserido: " + txt_Brand.Text + " " + txt_Model.Text + "\t" + DateTime.Now.ToString() + "\n");
                 File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                 showPC();
                 totalPC();
 
-                txt_Marca.Clear();
-                txt_Modelo.Clear();
+                txt_Brand.Clear();
+                txt_Model.Clear();
             }
             else
                 MessageBox.Show("Preencha os campos necessários!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -355,19 +355,19 @@ namespace LanValley
 
                     //write action on BD
                     StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.Append("PC Eliminado: " + txt_Marca.Text + " " + txt_Modelo.Text + "\t" + DateTime.Now.ToString() + "\n");
+                    stringBuilder.Append("PC Eliminado: " + txt_Brand.Text + " " + txt_Model.Text + "\t" + DateTime.Now.ToString() + "\n");
                     File.AppendAllText(AppDomain.CurrentDomain.BaseDirectory + @"\" + "logs.txt", stringBuilder.ToString());
 
                     showPC();
                     totalPC();
 
-                    txt_Marca.Clear();
-                    txt_Modelo.Clear();
+                    txt_Brand.Clear();
+                    txt_Model.Clear();
                 }
                 else
                 {
-                    txt_Marca.Clear();
-                    txt_Modelo.Clear();
+                    txt_Brand.Clear();
+                    txt_Model.Clear();
                 }
             }
             else
@@ -389,7 +389,7 @@ namespace LanValley
                 new frmContactingBD().ShowDialog();
 
                 sqlcon = new SqlConnection(cs);
-                cmd = new SqlCommand("INSERT INTO [tbl_Jogos] ([Nome], [EXE]) VALUES (@Nome, @Exe)", sqlcon);
+                cmd = new SqlCommand("INSERT INTO [tbl_Games] ([Nome], [EXE]) VALUES (@Nome, @Exe)", sqlcon);
                 sqlcon.Open();
                 cmd.Parameters.AddWithValue("@Nome", txt_gameName.Text);
                 cmd.Parameters.AddWithValue("@Exe", txt_exeName.Text);
@@ -398,7 +398,7 @@ namespace LanValley
 
                 MessageBox.Show("Jogo adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                showJogos();
+                showGames();
 
                 txt_gameName.Clear();
                 txt_exeName.Clear();

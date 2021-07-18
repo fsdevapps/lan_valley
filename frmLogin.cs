@@ -86,13 +86,13 @@ namespace LanValley
         }
 
         //button click event -> close app
-        private void btn_Sair_Click(object sender, EventArgs e)
+        private void btn_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         //link label click event -> open create account form
-        private void lnk_lblCriar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnk_lblCreate_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmCriar criarConta = new frmCriar();
             Hide();
@@ -101,7 +101,7 @@ namespace LanValley
         }
 
         //link label click event -> open support form
-        private void lnk_lblSuporte_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lnk_lblSupport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmSuporte suporte = new frmSuporte();
             Hide();

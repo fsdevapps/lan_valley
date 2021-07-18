@@ -34,14 +34,14 @@ namespace LanValley
             this.lbl_User = new System.Windows.Forms.Label();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.lbl_Pass = new System.Windows.Forms.Label();
-            this.lnk_lblCriar = new System.Windows.Forms.LinkLabel();
-            this.lnk_lblSuporte = new System.Windows.Forms.LinkLabel();
+            this.lnk_lblCreate = new System.Windows.Forms.LinkLabel();
+            this.lnk_lblSupport = new System.Windows.Forms.LinkLabel();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btn_Login = new System.Windows.Forms.PictureBox();
-            this.btn_Sair = new System.Windows.Forms.PictureBox();
+            this.btn_Exit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Login)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Sair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_User
@@ -92,33 +92,33 @@ namespace LanValley
             this.lbl_Pass.TabIndex = 3;
             this.lbl_Pass.Text = "Password";
             // 
-            // lnk_lblCriar
+            // lnk_lblCreate
             // 
-            this.lnk_lblCriar.AutoSize = true;
-            this.lnk_lblCriar.BackColor = System.Drawing.Color.Transparent;
-            this.lnk_lblCriar.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_lblCriar.LinkColor = System.Drawing.SystemColors.ControlText;
-            this.lnk_lblCriar.Location = new System.Drawing.Point(406, 697);
-            this.lnk_lblCriar.Name = "lnk_lblCriar";
-            this.lnk_lblCriar.Size = new System.Drawing.Size(189, 24);
-            this.lnk_lblCriar.TabIndex = 8;
-            this.lnk_lblCriar.TabStop = true;
-            this.lnk_lblCriar.Text = "Criar Conta";
-            this.lnk_lblCriar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_lblCriar_LinkClicked);
+            this.lnk_lblCreate.AutoSize = true;
+            this.lnk_lblCreate.BackColor = System.Drawing.Color.Transparent;
+            this.lnk_lblCreate.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_lblCreate.LinkColor = System.Drawing.SystemColors.ControlText;
+            this.lnk_lblCreate.Location = new System.Drawing.Point(406, 697);
+            this.lnk_lblCreate.Name = "lnk_lblCreate";
+            this.lnk_lblCreate.Size = new System.Drawing.Size(189, 24);
+            this.lnk_lblCreate.TabIndex = 8;
+            this.lnk_lblCreate.TabStop = true;
+            this.lnk_lblCreate.Text = "Criar Conta";
+            this.lnk_lblCreate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_lblCreate_LinkClicked);
             // 
-            // lnk_lblSuporte
+            // lnk_lblSupport
             // 
-            this.lnk_lblSuporte.AutoSize = true;
-            this.lnk_lblSuporte.BackColor = System.Drawing.Color.Transparent;
-            this.lnk_lblSuporte.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_lblSuporte.LinkColor = System.Drawing.SystemColors.ControlText;
-            this.lnk_lblSuporte.Location = new System.Drawing.Point(346, 741);
-            this.lnk_lblSuporte.Name = "lnk_lblSuporte";
-            this.lnk_lblSuporte.Size = new System.Drawing.Size(309, 24);
-            this.lnk_lblSuporte.TabIndex = 9;
-            this.lnk_lblSuporte.TabStop = true;
-            this.lnk_lblSuporte.Text = "Contactar Suporte";
-            this.lnk_lblSuporte.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_lblSuporte_LinkClicked);
+            this.lnk_lblSupport.AutoSize = true;
+            this.lnk_lblSupport.BackColor = System.Drawing.Color.Transparent;
+            this.lnk_lblSupport.Font = new System.Drawing.Font("ROG Fonts", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_lblSupport.LinkColor = System.Drawing.SystemColors.ControlText;
+            this.lnk_lblSupport.Location = new System.Drawing.Point(346, 741);
+            this.lnk_lblSupport.Name = "lnk_lblSupport";
+            this.lnk_lblSupport.Size = new System.Drawing.Size(309, 24);
+            this.lnk_lblSupport.TabIndex = 9;
+            this.lnk_lblSupport.TabStop = true;
+            this.lnk_lblSupport.Text = "Contactar Suporte";
+            this.lnk_lblSupport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_lblSupport_LinkClicked);
             // 
             // logo
             // 
@@ -146,18 +146,18 @@ namespace LanValley
             this.btn_Login.TabStop = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
-            // btn_Sair
+            // btn_Exit
             // 
-            this.btn_Sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Sair.Image = global::LanValley.Properties.Resources.exit;
-            this.btn_Sair.Location = new System.Drawing.Point(73, 446);
-            this.btn_Sair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(220, 121);
-            this.btn_Sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Sair.TabIndex = 11;
-            this.btn_Sair.TabStop = false;
-            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
+            this.btn_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Exit.Image = global::LanValley.Properties.Resources.exit;
+            this.btn_Exit.Location = new System.Drawing.Point(73, 446);
+            this.btn_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Exit.Name = "btn_Exit";
+            this.btn_Exit.Size = new System.Drawing.Size(220, 121);
+            this.btn_Exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Exit.TabIndex = 11;
+            this.btn_Exit.TabStop = false;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // frmLogin
             // 
@@ -165,10 +165,10 @@ namespace LanValley
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 800);
-            this.Controls.Add(this.btn_Sair);
+            this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Login);
-            this.Controls.Add(this.lnk_lblSuporte);
-            this.Controls.Add(this.lnk_lblCriar);
+            this.Controls.Add(this.lnk_lblSupport);
+            this.Controls.Add(this.lnk_lblCreate);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.lbl_Pass);
             this.Controls.Add(this.txt_Pass);
@@ -185,7 +185,7 @@ namespace LanValley
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Login)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_Sair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Exit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +198,10 @@ namespace LanValley
         private System.Windows.Forms.TextBox txt_Pass;
         private System.Windows.Forms.Label lbl_Pass;
         private System.Windows.Forms.PictureBox logo;
-        private System.Windows.Forms.LinkLabel lnk_lblCriar;
-        private System.Windows.Forms.LinkLabel lnk_lblSuporte;
+        private System.Windows.Forms.LinkLabel lnk_lblCreate;
+        private System.Windows.Forms.LinkLabel lnk_lblSupport;
         private System.Windows.Forms.PictureBox btn_Login;
-        private System.Windows.Forms.PictureBox btn_Sair;
+        private System.Windows.Forms.PictureBox btn_Exit;
     }
 }
 
